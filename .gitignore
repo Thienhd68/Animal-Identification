@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*. py[cod]
+*$py.class
+*.so
+
+# Virtual Environment
+venv/
+env/
+. venv/
+
+# IDE
+.vscode/
+. idea/
+*.swp
+*. swo
+
+# YOLO runs output
+runs/
+
+# Database (nếu không muốn share data)
+*.db
+
+# Model files (nếu quá lớn >100MB)
+# *.pt
+
+# Jupyter
+.ipynb_checkpoints/
+*. ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log

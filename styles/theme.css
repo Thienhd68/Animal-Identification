@@ -1,0 +1,163 @@
+/* Bypass.link Style Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* GLOBAL RESETS */
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ============================================
+   BACKGROUNDS & UTILITIES
+   ============================================ */
+[data-testid="stAppViewContainer"] {
+    background-color: #09090b !important;
+    /* Deep dark background */
+}
+
+.main .block-container {
+    max-width: 1000px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* ============================================
+   NAVBAR (Minimal Top Bar)
+   ============================================ */
+.modern-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand span {
+    color: #5865F2;
+    /* Accent color */
+}
+
+/* ============================================
+   HERO SECTION (Centered Title)
+   ============================================ */
+h1 {
+    text-align: center;
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    background: linear-gradient(to right, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem !important;
+}
+
+div[data-testid="stMarkdownContainer"] p {
+    text-align: center;
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   INPUT BOX CONTAINER (The "Bypass" box style)
+   ============================================ */
+[data-testid="stFileUploader"] {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.2s;
+    max-width: 700px;
+    margin: 0 auto;
+    /* Center it */
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: #5865F2;
+    box-shadow: 0 0 0 4px rgba(88, 101, 242, 0.1);
+}
+
+[data-testid="stFileUploader"] section {
+    background: transparent;
+    color: #a1a1aa;
+}
+
+[data-testid="stFileUploader"] button {
+    background: #5865F2;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+/* ============================================
+   BUTTONS (Primary Action)
+   ============================================ */
+.stButton>button {
+    background-color: #5865F2;
+    color: white;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s;
+    width: 100%;
+    /* Full width buttons usually look good in this layout */
+}
+
+.stButton>button:hover {
+    background-color: #4752c4;
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   SIDEBAR (Clean Dark)
+   ============================================ */
+[data-testid="stSidebar"] {
+    background-color: #09090b !important;
+    border-right: 1px solid #27272a;
+}
+
+.stRadio label {
+    color: #a1a1aa !important;
+}
+
+.stRadio label:hover {
+    color: white !important;
+}
+
+/* ============================================
+   RESULTS & CARDS
+   ============================================ */
+[data-testid="stImage"],
+[data-testid="stVideo"] {
+    background: #18181b;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #27272a;
+}
+
+div[data-testid="metric-container"] {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+[data-testid="stMetricValue"] {
+    color: #5865F2;
+}
+
+/* ============================================
+   HIDE ELEMENTS
+   ============================================ */
+#MainMenu,
+footer,
+header {
+    visibility: hidden;
+}
