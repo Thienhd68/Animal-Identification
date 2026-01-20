@@ -2,46 +2,66 @@
 
 Hệ thống nhận diện và đếm động vật trong chăn nuôi sử dụng AI YOLOv8.
 
-## 🚀 Cách chạy
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28-red)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-green)
 
-### Cách 1: Sử dụng file batch (Đơn giản nhất)
-1. Double-click vào file `run_app.bat`
-2. Ứng dụng sẽ tự động mở trình duyệt
+## 📸 Demo
 
-### Cách 2: Manual qua Command Prompt
+<!-- Thêm screenshot ứng dụng ở đây -->
+
+## 🚀 Cài đặt
+
+### 1. Clone repository
+
 ```bash
-cd C:\Users\Ryan24\Downloads\MODELS\MODELS
-venv\Scripts\activate
-pip install -r requirements.txt
-python -m streamlit run app.py
+git clone https://github.com/Thienhd68/Animal-Identification.git
+cd Animal-Identification
 ```
 
-### Bước 3: Mở trình duyệt
-Mở trình duyệt web và truy cập: `http://localhost:8501`
+### 2. Tạo virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux/Mac
+```
+
+### 3. Cài đặt dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Chạy ứng dụng
+
+```bash
+streamlit run app.py
+```
+
+Hoặc double-click file `run_app.bat` (Windows)
 
 ## 📋 Tính năng
+
 - ✅ Upload ảnh hoặc video động vật
 - ✅ Nhận diện tự động với YOLOv8
 - ✅ Đếm số lượng chính xác
 - ✅ Tracking video với ByteTrack
-- ✅ Cảnh báo mật độ chăn nuôi
-- ✅ Lịch sử phân tích
+- ✅ Lưu trữ lịch sử vào SQLite
+- ✅ Xuất báo cáo CSV
 
-## 🛠️ Công nghệ sử dụng
-- **YOLOv8** (Ultralytics) - Object Detection
-- **Streamlit** - Web UI
-- **OpenCV** - Xử lý ảnh/video
-- **PyTorch** - Deep Learning Framework
+## 🛠️ Công nghệ
 
-## 📁 Cấu trúc thư mục
-```
-MODELS/
-├── app.py              # Ứng dụng chính
-├── predict.py          # Logic xử lý AI
-├── config.py           # Cấu hình
-├── model/
-│   └── best.pt         # Model YOLOv8 đã train
-├── layout/             # Components UI
-├── styles/             # CSS styling
-└── requirements.txt    # Dependencies
-```
+- **YOLOv8** - Object Detection
+- **Streamlit** - Web Interface
+- **OpenCV** - Image Processing
+- **SQLite** - Database
+- **Plotly** - Data Visualization
+
+## 👥 Thực hiện
+
+**Nhóm 9** - Đồ án Machine Learning
+
+## 📄 License
+
+MIT License
