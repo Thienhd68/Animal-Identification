@@ -52,8 +52,6 @@ Hoặc double-click file `run_app.bat` (Windows)
 
 ## 🛠️ Công nghệ
 
-## 🛠️ Công nghệ
-
 <table>
   <tr>
     <td align="center" width="96">
