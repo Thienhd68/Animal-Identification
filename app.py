@@ -7,7 +7,7 @@ import datetime
 import pandas as pd
 import sqlite3
 import plotly.express as px
-from layout.alert import render_alert
+
 # =========================
 # 1. CẤU HÌNH TRANG
 # =========================
@@ -91,6 +91,10 @@ st.markdown("""
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        color: black !important;
+    }
+    div[data-testid="stMetric"] * {
+        color: black !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -182,17 +186,11 @@ with tab1:
                                  color_discrete_sequence=px.colors.sequential.Greens_r)
                     fig.update_layout(height=300, margin=dict(t=30,b=0,l=0,r=0))
                     st.plotly_chart(fig, use_container_width=True)
-
-                    # ========== GỌI HÀM CẢNH BÁO ==========
-                    st.markdown("---")
-                    render_alert(counter)
-                    # ==========================================
-
                     save_to_db("Image", counter)
                     st.toast("✅ Đã lưu dữ liệu!", icon="💾")
 
         elif filename.endswith('.mp4'):
-            tfile = tempfile.NamedTemporaryFile(delete=False)
+            tfile = tempfile.NamedTemporaryFile(delete=False, suffix='.mp4')
             tfile.write(uploaded_file.read())
             
             prog = st.progress(0, "Đang khởi động Engine...")
